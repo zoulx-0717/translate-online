@@ -12,5 +12,5 @@ export default new Router({
       component: HelloWorld
     }
   ],
-	mode:'hash'
+	mode:'history'
 })
