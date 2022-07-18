@@ -29,9 +29,9 @@ export default {
 	},
 	methods:{
 		TranslateText(text,language){
-			this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170721T082515Z.54cf3dc583f679db.f4a96182281281d8b5dfe24b4e88298e2133f219&lang='+language+'&text=' + text)
+			this.$http.get('http://dict.youdao.com/suggest?q=text&num=1&doctype=json)
 			.then((response) =>{
-				this.translateResult = response.body.text[0];
+				this.translateResult = response.data.entries[0].explain;
 			})
 		}
 	}
